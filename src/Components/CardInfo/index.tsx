@@ -26,7 +26,9 @@ export const CardInfo = ({ fixed, dataType, MouseEnter, MouseLeave } : ICardInfo
     "Node.Js",
     "DotNet Core",
     "Express.Js",
-    "Unity"
+    "Unity",
+    "Godot",
+    "SFML"
   ];
   const soft: string[] = [
     "LeaderShip",
