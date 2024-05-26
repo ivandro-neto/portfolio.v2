@@ -9,7 +9,7 @@ const Home = () => {
   const [hoverState, setHoverState] = useState({ isHovered: false, hoverType: '' });
   const [fixed, setFixed] = useState(false);
 
-  const handleHoverIn = (type) => {
+  const handleHoverIn = (type: string) => {
     setHoverState({ isHovered: true, hoverType: type });
   };
 
@@ -17,7 +17,7 @@ const Home = () => {
     setHoverState({ isHovered: false, hoverType: '' });
   };
 
-  const handleLogoClick = (e) => {
+  const handleLogoClick = (e: Event) => {
     e.stopPropagation();
     setFixed(!fixed);
   };
@@ -25,12 +25,12 @@ const Home = () => {
   return (
     <section className={styles.container}>
       <Cursor isHovered={hoverState.isHovered} hoverType={hoverState.hoverType} />
-      <main className={styles.hero} onClick={handleLogoClick}>
+      <main className={styles.hero} onClick={() => handleLogoClick}>
           <div
             className={`${styles.logo} ${fixed ? styles.pulsing : ''}`}
             onMouseEnter={() => handleHoverIn('cta')}
             onMouseLeave={handleHoverOut}
-            onClick={handleLogoClick}
+            onClick={() => handleLogoClick}
           >
             <img src={Logo} alt="Logo" />
           </div>
