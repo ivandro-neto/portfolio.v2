@@ -55,10 +55,10 @@ export default function Cursor({ isHovered, hoverType }: ICursorProps) {
       return `${styles.cursor1} ${styles.cta}`;
     }
     if (isHovered && hoverType === 'link') {
-      return `${styles.cursor1} ${styles.link}`;
+      return `${styles.cursor1} ${styles.hide}`;
     }
     if (isHovered && hoverType === 'button') {
-      return `${styles.cursor1} ${styles.button}`;
+      return `${styles.cursor1} ${styles.hide}`;
     }
     return `${styles.cursor1}`;
   };

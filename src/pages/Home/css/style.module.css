@@ -66,11 +66,17 @@
   position: relative;
   display: flex;
   justify-content: center;
-  gap: 2dvw;
-  padding: 1dvw;
+  gap: 2vw;
+  padding: 1vw;
 }
 .footer a {
   fill: var(--white);
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: none;
 }
 @keyframes pulse {
   0% {
