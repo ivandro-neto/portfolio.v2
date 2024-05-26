@@ -1,18 +1,20 @@
 import { useEffect, useRef, useState } from 'react';
 import styles from './style.module.css';
 
-interface ICursorProps{
-  isHovered : boolean;
+interface ICursorProps {
+  isHovered: boolean;
   hoverType: string;
 }
 
-export default function Cursor({isHovered, hoverType} : ICursorProps) {
+export default function Cursor({ isHovered, hoverType }: ICursorProps) {
   const [cursorStyle, setCursorStyle] = useState('');
   const [cursor1Style, setCursor1Style] = useState('');
-  const cursorRef = useRef(null);
-  const cursor1Ref = useRef(null);
+  const cursorRef = useRef<HTMLDivElement | null>(null);
+  const cursor1Ref = useRef<HTMLDivElement | null>(null);
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: MouseEvent) => {
+    if (!cursorRef.current || !cursor1Ref.current) return;
+
     const followerRect = cursorRef.current.getBoundingClientRect();
     const followerCenterX = followerRect.left + followerRect.width / 2;
     const followerCenterY = followerRect.top + followerRect.height / 2;
@@ -30,10 +32,10 @@ export default function Cursor({isHovered, hoverType} : ICursorProps) {
 
     // Set positions for follower cursors with a slight delay
     setTimeout(() => {
-      cursor1Ref.current.style.left = newX + "px";
-      cursor1Ref.current.style.top = newY + "px";
-
-      
+      if (cursor1Ref.current) {
+        cursor1Ref.current.style.left = x + "px";
+        cursor1Ref.current.style.top = y + "px";
+      }
     }, 50); // Adjust the delay as needed
   };
 
@@ -53,14 +55,14 @@ export default function Cursor({isHovered, hoverType} : ICursorProps) {
       return `${styles.cursor1} ${styles.cta}`;
     }
     if (isHovered && hoverType === 'link') {
-      return `${styles.cursor1} ${styles.hide}`;
+      return `${styles.cursor1} ${styles.link}`;
     }
-    
     if (isHovered && hoverType === 'button') {
-      return `${styles.cursor1} ${styles.hide}`;
+      return `${styles.cursor1} ${styles.button}`;
     }
     return `${styles.cursor1}`;
   };
+
   const handleHoverPointer = () => {
     if (isHovered && hoverType === '') {
       return `${styles.ishovered} ${styles.cursor}`;
@@ -81,6 +83,7 @@ export default function Cursor({isHovered, hoverType} : ICursorProps) {
     setCursorStyle(handleHoverPointer());
     setCursor1Style(handleHover());
   }, [isHovered, hoverType]);
+
   return (
     <>
       <div className={cursorStyle} ref={cursorRef}></div>
