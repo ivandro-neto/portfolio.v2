@@ -1,0 +1,67 @@
+.brief {
+  display: flex;
+  flex-direction: column;
+  width: 25em;
+  height: auto;
+  color: var(--white);
+  background-color: var(--raisin-black);
+  border-radius: 15px;
+  padding: 20px;
+  top: 5em;
+  right: 5em;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+  transform: translateY(-10px);
+}
+
+.role {
+  color: var(--dodger-blue);
+}
+
+.description {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.brief.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.skillList{
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: safe;
+  gap: 5px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.skills{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.skill{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: var(--dodger-blue);
+  border-radius: 20px;
+  font-size: .8rem;
+}
+
+/* Media queries para tornar o modal responsivo */
+@media (max-width: 768px) {
+  .brief {
+    width: 90%;
+    right: 5%;
+    left: 5%;
+    padding: 10px;
+  }
+}

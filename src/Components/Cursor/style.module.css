@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none;
+}
+
+
+
+.cursor{
+  z-index: 10;
+  width: .7em;
+  height: .7em;
+  background-color: var(--dodger-blue);
+  position: fixed;
+  transform: translate(-54%, -50%);
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  transition: 100ms;
+  opacity: 1;
+  transition: opacity width height 1s ;
+}
+
+.cursor1{
+    z-index: 10;
+    width: 2em;
+    height: 2em;
+    background-color: transparent;
+    border: 1px solid var(--dodger-blue);
+    position: fixed;
+    transform: translate(-54%, -50%);
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    transition: 100ms;
+    
+}
+
+
+.cta{
+  width: 8em;
+  height: 8em;
+}
+.ishovered{
+  width: 4em;
+  height: 4em;
+}
+
+.link{
+  width: 2em;
+  height: 2em;
+  background-color: transparent;
+  border: 2px dotted var(--white);
+  animation: spin 1s infinite linear;
+}
+
+.button{
+  width: 2em;
+  height: 2em;
+  background-color: transparent;
+  border: 2px dashed var(--white);
+  animation: spin 1s infinite linear;
+}
+.hide{
+  opacity: 0;
+}
+.borderedWhite{
+  background-color: transparent;
+  border: 1px solid var(--white);
+}
+.bordered{
+  background-color: transparent;
+  border: 1px solid var(--dodger-blue);
+}
+
+@media screen and (max-width: 1200px) {
+.cursor,
+.cursor1,
+.cursor2{
+  display: none;
+}
+
+}
+
+@keyframes spin {
+  0%{
+    transform:rotate(0deg);
+
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

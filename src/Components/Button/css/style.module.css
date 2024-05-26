@@ -1,0 +1,58 @@
+.button {
+  position: relative;
+  display: flex;
+  margin-top: 5vh; /* Ajuste conforme necessário */
+  padding: 2vw; /* Ajuste conforme necessário */
+  font-size: 1.5vw; /* Ajuste conforme necessário */
+  border: 2px solid var(--dodger-blue);
+  background-color: transparent;
+  overflow: hidden;
+  width: 30%; /* Ajuste conforme necessário */
+  height: 20%; /* Ajuste conforme necessário */
+  cursor: pointer;
+}
+
+.button::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  background-color: var(--dodger-blue);
+  top: 0;
+  left: 0;
+  transition: width 500ms; /* Alterei a propriedade de transição */
+}
+
+.button:hover::before {
+  width: 100%;
+}
+
+.button:hover a {
+  color: var(--white);
+}
+
+.button a {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  color: var(--white);
+  z-index: 1;
+  transition: color 250ms;
+  width: 100%;
+  height: 100%;
+  text-transform: uppercase;
+  font-weight: 550;
+}
+
+/* Media queries para tornar o botão mais responsivo */
+@media (max-width: 768px) {
+  .button {
+    font-size: 2vw;
+    width: 50vw;
+    height: 8vh;
+  }
+}
