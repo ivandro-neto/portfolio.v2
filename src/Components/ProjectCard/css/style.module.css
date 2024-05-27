@@ -11,6 +11,7 @@
   border-radius: 20px;
   transition: 500ms;
   overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.253);
 }
 
 .container:not(.up):hover {
@@ -24,14 +25,16 @@
 }
 
 .minimized img {
-  width: 8em;
+  width: 15em;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.13);
 }
 
 .bgImg img {
-  width: 30em;
+  width: 50em;
   opacity: 1;
   z-index: 1;
-  transform: translate(0, 50vh);
+  transform: translate(10vw, 60vh);
+  box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.301);
 }
 
 .smallLogo {
@@ -136,7 +139,7 @@
   color: var(--white);
   font-weight: 800;
   text-wrap: wrap;
-  text-align: justify;
+  text-align: left;
 }
 
 .live a:hover {

@@ -10,7 +10,12 @@ interface IGalleryProps {
   MouseLeave: () => void | null;
 }
 
-export const Gallery = ({ show, onClose, MouseEnter, MouseLeave }: IGalleryProps) => {
+export const Gallery = ({
+  show,
+  onClose,
+  MouseEnter,
+  MouseLeave,
+}: IGalleryProps) => {
   const [isUp, setIsUp] = useState(false);
 
   useEffect(() => {
@@ -29,30 +34,24 @@ export const Gallery = ({ show, onClose, MouseEnter, MouseLeave }: IGalleryProps
 
   const projects: IProjectData[] = [
     {
-      title: "IN.code",
-      description:
-        `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-      Magnam, fugiat, minima ullam maxime earum iusto, 
-      et quibusdam illum deleniti eum suscipit? 
-      Facere quisquam voluptas, numquam saepe 
-      distinctio fuga asperiores perferendis 
-      quasi dolor reiciendis rem iusto doloremque 
-      nisi eos, maiores eligendi a non similique! 
-      Voluptatum consequatur ullam incidunt ut. 
-      Reprehenderit, tempora.`,
-      bgColor: "#212531ff",
-      color: "#fcfcfcff",
-      imgURL: "/logo/logo-white.png",
-      liveLink: "",
-      liveMask: "Discover the world inside the panties of a big foot in the beach Or something else that you could like before",
-      logo: "/logo/logo-white.png",
-      repo: "",
-      techs: ["React.Js", "TailwindCss"],
+      title: "Age Calculator App",
+      description: `This is a solution to the Age calculator app challenge on Frontend Mentor.
+       Frontend Mentor challenges help you improve your coding skills by building realistic projects.`,
+      bgColor: "#ffffff",
+      color: "hsl(0, 0%, 8%)",
+      imgURL:
+        "https://raw.githubusercontent.com/ivandro-neto/Age-Calculator-App/main/screenshots/screenshot.png",
+      liveLink: "https://age-calculator-app-bice.vercel.app/",
+      liveMask:
+        "Get your age just typing your birth date!",
+      logo: "/logo/logo-black.png",
+      repo: "https://github.com/ivandro-neto/age-calculator-app",
+      techs: ["React", "TypeScript", "CSS"],
+      scheme : 'light'
     },
     {
-      title: "SPACIUM",
-      description:
-        `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+      title: "kilunga App",
+      description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
       Magnam, fugiat, minima ullam maxime earum iusto, 
       et quibusdam illum deleniti eum suscipit? 
       Facere quisquam voluptas, numquam saepe 
@@ -63,17 +62,18 @@ export const Gallery = ({ show, onClose, MouseEnter, MouseLeave }: IGalleryProps
       Reprehenderit, tempora.`,
       bgColor: "#305350",
       color: "#FFFFFF",
-      imgURL: "/projects/bg/spacium.png",
-      liveLink: "",
-      liveMask: "Discover the world inside the panties of a big foot in the beach Or something else that you could like before",
+      imgURL: "https://github.com/ivandro-neto/Portfolio/blob/main/images/Projects/kilunga.png?raw=true",
+      liveLink: "https://kilunga.netlify.app/",
+      liveMask:
+        "Cultivar com technologia é cultive bem!",
       logo: "/projects/bg/spacium.png",
-      repo: "",
-      techs: ["React.Js", "TailwindCss"],
+      repo: "https://github.com/ivandro-neto/Kilunga",
+      techs: ["HTML", "CSS", "JavaScript"],
+      scheme : 'dark'
     },
     {
-      title: "Templefy.me",
-      description:
-        `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+      title: "EventGub Api",
+      description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
       Magnam, fugiat, minima ullam maxime earum iusto, 
       et quibusdam illum deleniti eum suscipit? 
       Facere quisquam voluptas, numquam saepe 
@@ -82,19 +82,20 @@ export const Gallery = ({ show, onClose, MouseEnter, MouseLeave }: IGalleryProps
       nisi eos, maiores eligendi a non similique! 
       Voluptatum consequatur ullam incidunt ut. 
       Reprehenderit, tempora.`,
-      bgColor: "#D4CB92",
-      color: "#101218ff",
-      imgURL: "/logo/logo-black.png",
-      liveLink: "",
-      liveMask: "Discover the world inside the panties of a big foot in the beach Or something else that you could like before",
-      logo: "/logo/logo-black.png",
-      repo: "",
-      techs: ["React.Js", "TailwindCss"],
+      bgColor: " #0a100dff",
+      color: "#eeeeffff",
+      imgURL: "https://github.com/ivandro-neto/Portfolio/blob/main/images/Projects/EventHubAPI.png?raw=true",
+      liveLink: "https://github.com/ivandro-neto/EventHub",
+      liveMask:
+        "Discover the world inside the panties of a big foot in the beach Or something else that you could like before",
+      logo: "/logo/logo-white.png",
+      repo: "https://github.com/ivandro-neto/EventHub",
+      techs: ["HTML", "CSS", "CSharp", "MySQL", "DotNet Core", "Docker"],
+      scheme : 'dark'
     },
     {
-      title: "Templefy.me",
-      description:
-        `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+      title: "IN.Store",
+      description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
       Magnam, fugiat, minima ullam maxime earum iusto, 
       et quibusdam illum deleniti eum suscipit? 
       Facere quisquam voluptas, numquam saepe 
@@ -103,38 +104,41 @@ export const Gallery = ({ show, onClose, MouseEnter, MouseLeave }: IGalleryProps
       nisi eos, maiores eligendi a non similique! 
       Voluptatum consequatur ullam incidunt ut. 
       Reprehenderit, tempora.`,
-      bgColor: "#D4CB92",
-      color: "#101218ff",
-      imgURL: "/logo/logo-black.png",
-      liveLink: "",
-      liveMask: "Discover the world inside the panties of a big foot in the beach Or something else that you could like before",
+      bgColor: "#ffffff",
+      color: "hsl(0, 0%, 8%)",
+      imgURL: "https://github.com/ivandro-neto/Portfolio/blob/main/images/Projects/Ecommerce.png?raw=true",
+      liveLink: "https://ivandro-neto.github.io/Ecommerce/",
+      liveMask:
+        "Discover the world inside the panties of a big foot in the beach Or something else that you could like before",
       logo: "/logo/logo-black.png",
-      repo: "",
-      techs: ["React.Js", "TailwindCss"],
+      repo: "https://github.com/ivandro-neto/Ecommerce.git",
+      techs: ["HTML", "CSS", "JavaScript"],
+      scheme : 'light'
     },
   ];
 
   return (
     <div className={`${styles.container} ${isUp ? styles.up : styles.down}`}>
-       <div className={styles.return}>
-          <ReturnButtonPage 
-            scheme={'light'}
-            value={'Go back'}
-            MouseEnter={MouseEnter}
-            MouseLeave={MouseLeave}
-            MouseClick={handleMouseClick}
-          />
-          <h1>Featured Projects</h1>
-       </div>
-       <div className={styles.list}>
-
-        {projects.map((project) => (
-          <ProjectCard key={project.title} data={project}
+      <div className={styles.return}>
+        <ReturnButtonPage
+          scheme={"light"}
+          value={"Go back"}
           MouseEnter={MouseEnter}
           MouseLeave={MouseLeave}
+          MouseClick={handleMouseClick}
+        />
+        <h1>Featured Projects</h1>
+      </div>
+      <div className={styles.list}>
+        {projects.map((project) => (
+          <ProjectCard
+            key={project.title}
+            data={project}
+            MouseEnter={MouseEnter}
+            MouseLeave={MouseLeave}
           />
         ))}
-        </div>
+      </div>
     </div>
   );
 };

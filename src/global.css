@@ -6,7 +6,7 @@
   --imperial-red: #fb3640ff;
   /* Neutral */
   --rich-black: #101218ff;
-  --white: #fcfcfcff;
+  --white: rgb(236, 236, 236);
   --raisin-black: #212531ff;
 }
 

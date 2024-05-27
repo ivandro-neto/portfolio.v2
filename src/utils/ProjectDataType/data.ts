@@ -10,4 +10,5 @@ interface IProjectData {
   liveLink: string;
   liveMask: string;
   techs: string[];
+  scheme: string;
 }
