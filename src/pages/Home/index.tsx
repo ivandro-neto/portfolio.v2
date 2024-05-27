@@ -43,6 +43,7 @@ const Home = () => {
         </div>
         <div className={styles.buttonContainer}>
           <ButtonPage
+            scheme={'dark'}
             value="view Projects"
             MouseClick={()=> setOpenned(true)}
             MouseEnter={() => handleHoverIn('button')}
