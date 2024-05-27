@@ -23,6 +23,8 @@
   transition: opacity width height 1s ;
 }
 
+
+
 .cursor1{
     z-index: 10;
     width: 2em;
@@ -63,6 +65,13 @@
   background-color: transparent;
   border: 2px dashed var(--white);
   animation: spin 1s infinite linear;
+}
+
+.link.dark{
+  border: 2px dotted var(--dodger-blue);
+}
+.button.dark{
+  border: 2px dashed var(--dodger-blue);
 }
 .hide{
   opacity: 0;

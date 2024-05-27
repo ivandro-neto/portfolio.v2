@@ -9,7 +9,7 @@
   height: 400px;
   padding: 20px;
   border-radius: 20px;
-  transition: 500ms;
+  transition: transform 0.5s, width 0.5s, height 0.5s;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.253);
 }
@@ -120,6 +120,10 @@
 
 .up {
   position: absolute;
+  top: 0;
+  left: 0;
+  align-self: center;
+  justify-self: center;
   width: 100vw;
   height: 100vh;
   border-radius: 0;

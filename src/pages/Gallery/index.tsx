@@ -127,8 +127,8 @@ export const Gallery = ({
           MouseLeave={MouseLeave}
           MouseClick={handleMouseClick}
         />
-        <h1>Featured Projects</h1>
       </div>
+        <h1>Featured Projects</h1>
       <div className={styles.list}>
         {projects.map((project) => (
           <ProjectCard

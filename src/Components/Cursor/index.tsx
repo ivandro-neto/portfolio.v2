@@ -9,8 +9,25 @@ interface ICursorProps {
 export default function Cursor({ isHovered, hoverType }: ICursorProps) {
   const [cursorStyle, setCursorStyle] = useState('');
   const [cursor1Style, setCursor1Style] = useState('');
+  const [textColor, setTextColor] = useState('');
+  const [bgColor, setBgColor] = useState('');
   const cursorRef = useRef<HTMLDivElement | null>(null);
   const cursor1Ref = useRef<HTMLDivElement | null>(null);
+
+  function calculateLuminance(color: string) {
+    const rgb = color.match(/\d+/g);
+    const [r, g, b] = rgb.map(component => {
+      const c = parseInt(component) / 255; // Normalize component values
+      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+    });
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b; // Calculate luminance
+  }
+
+  // Function to determine whether to use black or white text based on background color brightness
+  function getContrastColor(color: string) {
+    const luminance = calculateLuminance(color);
+    return luminance > 0.5 ? 'black' : 'white';
+  }
 
   const handleMouseMove = (e: MouseEvent) => {
     if (!cursorRef.current || !cursor1Ref.current) return;
@@ -30,6 +47,19 @@ export default function Cursor({ isHovered, hoverType }: ICursorProps) {
     cursorRef.current.style.left = newX + "px";
     cursorRef.current.style.top = newY + "px";
 
+    const hoveredElement = document.elementFromPoint(x, y);
+
+    if (hoveredElement) {
+      // Extract the color of the hovered element's text and background
+      const computedStyle = window.getComputedStyle(hoveredElement);
+      const textColor = computedStyle.getPropertyValue('color');
+      const bgColor = computedStyle.getPropertyValue('background-color');
+
+      // Set text and background color states
+      setTextColor(getContrastColor(textColor));
+      setBgColor(getContrastColor(bgColor));
+    }
+
     // Set positions for follower cursors with a slight delay
     setTimeout(() => {
       if (cursor1Ref.current) {
@@ -46,6 +76,11 @@ export default function Cursor({ isHovered, hoverType }: ICursorProps) {
       document.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
+
+  useEffect(() => {
+    setCursorStyle(handleHoverPointer());
+    setCursor1Style(handleHover());
+  }, [isHovered, hoverType, textColor, bgColor]); // Add textColor and bgColor to the dependency array
 
   const handleHover = () => {
     if (isHovered && hoverType === '') {
@@ -71,18 +106,19 @@ export default function Cursor({ isHovered, hoverType }: ICursorProps) {
       return `${styles.cursor} ${styles.bordered}`;
     }
     if (isHovered && hoverType === 'link') {
+      if (bgColor === 'black') {
+        return `${styles.cursor} ${styles.link} ${styles.dark}`;
+      }
       return `${styles.cursor} ${styles.link}`;
     }
     if (isHovered && hoverType === 'button') {
+      if (bgColor === 'black') {
+        return `${styles.cursor} ${styles.button} ${styles.dark}`;
+      }
       return `${styles.cursor} ${styles.button}`;
     }
     return `${styles.cursor}`;
   };
-
-  useEffect(() => {
-    setCursorStyle(handleHoverPointer());
-    setCursor1Style(handleHover());
-  }, [isHovered, hoverType]);
 
   return (
     <>
