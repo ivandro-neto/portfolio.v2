@@ -44,7 +44,8 @@ export const ProjectCard = ({ data,  MouseEnter, MouseLeave }: IProjectProps) =>
           <img src={data.imgURL} alt={data.title} />
         </div>
         <div className={`${isUp ? styles.hide : styles.smallLogo}`}>
-          <img src={data.logo} alt={data.title} />
+        <h1 style={{color : data.color}} className={styles.title}>{data.title}</h1>
+
         </div>
         <div className={`${isUp ? styles.layer : styles.hide}`}>
           <div className={styles.return}>
@@ -60,6 +61,7 @@ export const ProjectCard = ({ data,  MouseEnter, MouseLeave }: IProjectProps) =>
             <div className={styles.header}>
               <div className={styles.logo}>
                 <img src={data.logo} alt={data.title} />
+                <h1 style={{color : data.color}} className={styles.title}>{data.title}</h1>
               </div>
               <div className={styles.live}>
                 <a href={data.liveLink} style={{color : data.color}} onMouseEnter={MouseEnter} onMouseLeave={MouseLeave}>{data.liveMask}</a>

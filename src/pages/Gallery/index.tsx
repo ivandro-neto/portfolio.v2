@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styles from "./css/style.module.css";
 import { ProjectCard } from "../../Components/ProjectCard";
 import { ReturnButtonPage } from "../../Components/Button";
+import { Footer } from "../../Components/Footer";
 
 interface IGalleryProps {
   show: boolean;
@@ -82,12 +83,33 @@ export const Gallery = ({ show, onClose, MouseEnter, MouseLeave }: IGalleryProps
       nisi eos, maiores eligendi a non similique! 
       Voluptatum consequatur ullam incidunt ut. 
       Reprehenderit, tempora.`,
-      bgColor: "#7D98A1",
+      bgColor: "#D4CB92",
       color: "#101218ff",
-      imgURL: "/logo/logo-white.png",
+      imgURL: "/logo/logo-black.png",
       liveLink: "",
       liveMask: "Discover the world inside the panties of a big foot in the beach Or something else that you could like before",
-      logo: "/logo/logo-white.png",
+      logo: "/logo/logo-black.png",
+      repo: "",
+      techs: ["React.Js", "TailwindCss"],
+    },
+    {
+      title: "Templefy.me",
+      description:
+        `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+      Magnam, fugiat, minima ullam maxime earum iusto, 
+      et quibusdam illum deleniti eum suscipit? 
+      Facere quisquam voluptas, numquam saepe 
+      distinctio fuga asperiores perferendis 
+      quasi dolor reiciendis rem iusto doloremque 
+      nisi eos, maiores eligendi a non similique! 
+      Voluptatum consequatur ullam incidunt ut. 
+      Reprehenderit, tempora.`,
+      bgColor: "#D4CB92",
+      color: "#101218ff",
+      imgURL: "/logo/logo-black.png",
+      liveLink: "",
+      liveMask: "Discover the world inside the panties of a big foot in the beach Or something else that you could like before",
+      logo: "/logo/logo-black.png",
       repo: "",
       techs: ["React.Js", "TailwindCss"],
     },

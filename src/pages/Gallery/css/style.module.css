@@ -19,7 +19,8 @@
 .list{
   position: absolute;
   display: flex;
-  width: 100%;
+  width: auto;
+  min-width: 100%;
   align-items: center;
   height: 100vh;
   justify-content: center;

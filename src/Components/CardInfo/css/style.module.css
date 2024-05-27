@@ -62,6 +62,20 @@
   flex-direction: column;
 }
 
+.brief h1{
+  font-size: 1.4rem;
+}
+
+.brief h2{
+  font-size: 1.2rem;
+}
+.brief h3{
+  font-size: 1.1rem;
+}
+.brief p{
+  font-size: 1rem;
+}
+
 /* Media queries para tornar o modal responsivo */
 @media (max-width: 768px) {
   .brief {

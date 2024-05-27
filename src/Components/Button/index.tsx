@@ -1,4 +1,4 @@
-import { MouseEventHandler} from 'react';
+import { MouseEventHandler, MouseEvent as ReactMouseEvent} from 'react';
 import styles from './css/style.module.css';
 
 interface IButtonProps {
@@ -11,7 +11,7 @@ interface IButtonProps {
 interface IButtonPageProps {
   scheme: string;
   value: string;
-  MouseClick: () => void | MouseEventHandler;
+  MouseClick: (event: ReactMouseEvent) => void | MouseEventHandler;
   MouseEnter: () => void; // Função para onMouseEnter
   MouseLeave: () => void; // Função para onMouseLeave
 }
