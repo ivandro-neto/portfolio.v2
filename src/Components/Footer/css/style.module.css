@@ -1,0 +1,10 @@
+.footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  padding: 1vw;
+}
+.footer a {
+  fill: var(--white);
+}

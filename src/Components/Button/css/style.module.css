@@ -1,18 +1,32 @@
 .button {
   position: relative;
   display: flex;
-  margin-top: 5vh; /* Ajuste conforme necessário */
-  padding: 2vw; /* Ajuste conforme necessário */
-  font-size: 1.5vw; /* Ajuste conforme necessário */
+  padding: 2em 6em; /* Ajuste conforme necessário */
+  font-size: 1rem; /* Ajuste conforme necessário */
   border: 2px solid var(--dodger-blue);
   background-color: transparent;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
-  width: 30%; /* Ajuste conforme necessário */
-  height: 20%; /* Ajuste conforme necessário */
+  cursor: pointer;
+  max-width: 200px;
+  max-height: 100px;
+}
+
+.btnSml{
+  font-size: .8rem;
+  padding: 20px 30px;
+  position: relative;
+  display: flex;
+  border: 2px solid var(--dodger-blue);
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
   cursor: pointer;
 }
 
-.button::before {
+.btnSml::before, .button::before {
   position: absolute;
   content: "";
   width: 0;
@@ -23,15 +37,15 @@
   transition: width 500ms; /* Alterei a propriedade de transição */
 }
 
-.button:hover::before {
+.button:hover::before, .btnSml:hover::before {
   width: 100%;
 }
 
-.button:hover a {
+.button:hover a, .btnSml:hover a {
   color: var(--white);
 }
 
-.button a {
+.button a, .btnSml a {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -48,11 +62,19 @@
   font-weight: 550;
 }
 
+
+.light a{
+  color: var(--raisin-black);
+}
+.dark a{
+  color: var(--white);
+}
 /* Media queries para tornar o botão mais responsivo */
 @media (max-width: 768px) {
   .button {
-    font-size: 2vw;
+    font-size: 1rem;
     width: 50vw;
     height: 8vh;
   }
+
 }

@@ -1,0 +1,165 @@
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: var(--raisin-black);
+  color: var(--white);
+  width: 250px;
+  height: 400px;
+  padding: 20px;
+  border-radius: 20px;
+  transition: 500ms;
+  overflow: hidden;
+}
+
+.minimized {
+  position: absolute;
+  bottom: 2em;
+}
+
+.minimized img {
+  width: 8em;
+}
+
+.bgImg img{
+  width: 30em;
+  opacity: 1;
+  z-index: 1;
+  transform: translate(0, 50vh);
+}
+
+.smallLogo {
+  position: absolute;
+  top: 2em;
+  left: 2em;
+  width: 32px;
+}
+
+.hide {
+  display: none;
+}
+
+.logo img{
+  width: 6em;
+
+}
+.smallLogo img {
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  gap: 25px;
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 30px;
+  z-index: 2;
+  gap: 20px;
+  transition: opacity 500ms;
+  transition-delay: 500ms;
+}
+
+.return {
+  width: 100%;
+  height: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+.info {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.description,
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 50%;
+  height: 100%;
+  gap: 20px;
+  line-height: 1.5;
+}
+
+.description p{
+  font-weight: 600;
+}
+
+.up {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  border-radius: 0;
+  transition: 500ms;
+  z-index: 5;
+}
+
+.live {
+  display: flex;
+  width: 80%;
+  height: auto;
+  max-height: 60%;
+}
+
+.live a {
+  font-size: 2rem;
+  color: var(--white);
+  font-weight: 800;
+  text-wrap: wrap;
+  text-align: justify;
+}
+
+.live a:hover{
+  filter: brightness(80%);
+}
+
+.techs {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+
+.techsList {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: safe;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.tech {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: var(--dodger-blue);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}

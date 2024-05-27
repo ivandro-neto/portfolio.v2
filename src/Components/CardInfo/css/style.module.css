@@ -20,7 +20,7 @@
 
 .description {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   flex-direction: column;
 }
 
@@ -56,12 +56,38 @@
   font-size: .8rem;
 }
 
+.contact{
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
 /* Media queries para tornar o modal responsivo */
 @media (max-width: 768px) {
   .brief {
-    width: 90%;
+    width: 100%;
     right: 5%;
     left: 5%;
     padding: 10px;
+    gap: 10px;
   }
+
+  .brief h1{
+    font-size: 1.4rem;
+  }
+  
+  .brief h2{
+    font-size: 1.1rem;
+  }
+  .brief h3{
+    font-size: 1rem;
+  }
+  .brief p{
+    font-size: .8rem;
+  }
+  
+  
+.skill{
+  font-size: .8rem;
+}
 }

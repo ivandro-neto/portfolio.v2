@@ -28,10 +28,11 @@ export const CardInfo = ({ fixed, dataType, MouseEnter, MouseLeave } : ICardInfo
     "Express.Js",
     "Unity"
   ];
+  
   const soft: string[] = [
-    "LeaderShip",
-    "Communication skill",
-    "Problem-solving",
+    "Leadership",
+    "Team Work",
+    "Criativity",
   ];
 
   return (
@@ -41,10 +42,10 @@ export const CardInfo = ({ fixed, dataType, MouseEnter, MouseLeave } : ICardInfo
           <h1 className={styles.title}>Ivandro Neto</h1>
           <div className={styles.description}>
             <h2 className={styles.role}>Software Engineer</h2>
-            <h4>
+            <h3>
               I create dynamic, user-centric digital solutions, driven by a
               passion for technology and a commitment to excellence.
-            </h4>
+            </h3>
             <p className={styles.info}>
               Greetings! I'm Ivandro Neto, a seasoned developer known for my
               dedication to excellence in the tech industry. With a solid
@@ -77,7 +78,7 @@ export const CardInfo = ({ fixed, dataType, MouseEnter, MouseLeave } : ICardInfo
           </div>
         </>
       ) : (
-        <>
+        <div className={styles.contact}>
         <h1>Let's Work Together</h1>
         <p>
           I'm always eager to connect! Whether you have a project in mind, want
@@ -87,12 +88,14 @@ export const CardInfo = ({ fixed, dataType, MouseEnter, MouseLeave } : ICardInfo
         </p>
         <div>
 
-        <Button value={'Say Hello'} 
+        <Button 
+        size={'small'}
+        value={'Say Hello'} 
         link="mailto:ivandro.neto@outlook.com?subject=Let's%20work"
         MouseEnter={MouseEnter}
         MouseLeave={MouseLeave}/>
         </div>
-        </>
+        </div>
       )}
     </div>
   );
