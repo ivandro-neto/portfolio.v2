@@ -24,7 +24,7 @@ export default function Cursor({ isHovered, hoverType }: ICursorProps) {
       return 0.2126 * r + 0.7152 * g + 0.0722 * b; // Calculate luminance
     } else {
       console.log("No color found.")
-      return 0;
+      return;
     }
   }
   
@@ -32,7 +32,10 @@ export default function Cursor({ isHovered, hoverType }: ICursorProps) {
   // Function to determine whether to use black or white text based on background color brightness
   function getContrastColor(color: string) {
     const luminance = calculateLuminance(color);
-    return luminance > 0.5 ? 'black' : 'white';
+    if (luminance) {
+      return luminance > 0.5 ? 'black' : 'white';
+    }
+    return '';
   }
 
   const handleMouseMove = (e: MouseEvent) => {
