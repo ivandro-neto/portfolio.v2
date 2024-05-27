@@ -73,6 +73,7 @@ const Home = () => {
         onClose={handleCloseGallery}
       />
       <Footer
+        scheme='dark'
         MouseEnter={() => handleHoverIn('link')}
         MouseLeave={handleHoverOut}
       />
