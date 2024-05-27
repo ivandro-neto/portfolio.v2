@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import styles from "./css/style.module.css";
 import { ProjectCard } from "../../Components/ProjectCard";
 import { ReturnButtonPage } from "../../Components/Button";
-import { Footer } from "../../Components/Footer";
 
 interface IGalleryProps {
   show: boolean;

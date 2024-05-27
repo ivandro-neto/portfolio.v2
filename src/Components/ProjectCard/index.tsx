@@ -12,17 +12,17 @@ export const ProjectCard = ({ data,  MouseEnter, MouseLeave }: IProjectProps) =>
   const [isUp, setIsUp] = useState(false);
 
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
+    const handleClickOutside = (event: ReactMouseEvent) => {
       const target = event.target as HTMLElement;
       if (!target.closest(`.${styles.container}`)) {
         setIsUp(false);
       }
     };
 
-    document.addEventListener("click", handleClickOutside);
+    document.addEventListener("click", ()=>handleClickOutside);
 
     return () => {
-      document.removeEventListener("click", handleClickOutside);
+      document.removeEventListener("click", ()=>handleClickOutside);
     };
   }, []);
 
