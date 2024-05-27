@@ -22,7 +22,7 @@
   flex-wrap: wrap;
   padding: 10px;
   gap: 20px;
-  border: 1px solid;
+  justify-content: center;
 }
 .up{
   width: 100%;

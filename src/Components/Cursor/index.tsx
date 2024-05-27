@@ -16,12 +16,18 @@ export default function Cursor({ isHovered, hoverType }: ICursorProps) {
 
   function calculateLuminance(color: string) {
     const rgb = color.match(/\d+/g);
-    const [r, g, b] = rgb.map(component => {
-      const c = parseInt(component) / 255; // Normalize component values
-      return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
-    });
-    return 0.2126 * r + 0.7152 * g + 0.0722 * b; // Calculate luminance
+    if (rgb) {
+      const [r, g, b] = rgb.map(component => {
+        const c = parseInt(component) / 255; // Normalize component values
+        return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+      });
+      return 0.2126 * r + 0.7152 * g + 0.0722 * b; // Calculate luminance
+    } else {
+      console.log("No color found.")
+      return 0;
+    }
   }
+  
 
   // Function to determine whether to use black or white text based on background color brightness
   function getContrastColor(color: string) {
