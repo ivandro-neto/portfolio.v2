@@ -43,7 +43,7 @@ export const CardInfo = ({ fixed, dataType, MouseEnter, MouseLeave } : ICardInfo
         <>
           <h1 className={styles.title}>Ivandro Neto</h1>
           <div className={styles.description}>
-            <h2 className={styles.role}>Software Engineer</h2>
+            <h2 className={styles.role}>Software Developer</h2>
             <h3>
               I create dynamic, user-centric digital solutions, driven by a
               passion for technology and a commitment to excellence.
