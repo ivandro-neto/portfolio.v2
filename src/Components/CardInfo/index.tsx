@@ -35,6 +35,7 @@ export const CardInfo = ({ fixed, dataType, MouseEnter, MouseLeave } : ICardInfo
     "Leadership",
     "Team Work",
     "Criativity",
+    "Problem-solving"
   ];
 
   return (
