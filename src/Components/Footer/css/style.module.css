@@ -2,9 +2,15 @@
   position: relative;
   display: flex;
   justify-content: center;
-  gap: 2vw;
+  gap: 2rem;
   padding: 1vw;
+  width: 100%;
 }
 .footer a {
   fill: var(--white);
+}
+@media screen and (max-width: 768px){
+  .footer{
+    gap: 3rem;
+  }
 }
