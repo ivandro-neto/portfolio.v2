@@ -6,7 +6,7 @@
   align-items: center;
   background-color: var(--rich-black);
   flex-direction: column;
-  
+  height: auto;
 }
 
 .hero {
@@ -118,10 +118,12 @@
     height: 70vh;
     padding: 10px;
   }
+
   .layer{
     flex-direction: column-reverse;
     gap: 10px;
-    padding: 10px;
     width: 100%;
   }
+
+  
 }

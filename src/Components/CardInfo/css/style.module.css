@@ -102,6 +102,26 @@
   
   
 .skill{
-  font-size: .8rem;
+  font-size: .6rem;
 }
+}
+
+@media screen and (max-width: 500px) {
+  .brief h1{
+    font-size: 1rem;
+  }
+  
+  .brief h2{
+    font-size: .8rem;
+  }
+  .brief h3{
+    font-size: .7rem;
+  }
+  .brief p{
+    font-size: .65rem;
+  }
+  .skill{
+    font-size: .6rem;
+  }
+
 }

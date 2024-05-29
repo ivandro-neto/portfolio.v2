@@ -6,12 +6,16 @@ interface IProjectProps {
   data: IProjectData;
   MouseEnter: () => void | null; // Função para onMouseEnter
   MouseLeave: () => void | null;
+  onExpand: (projectTitle: string | null) => void; // Adicionado callback
+  isVisible: boolean; // Adicionado prop para visibilidade
 }
 
 export const ProjectCard = ({
   data,
   MouseEnter,
   MouseLeave,
+  onExpand,
+  isVisible,
 }: IProjectProps) => {
   const [isUp, setIsUp] = useState(false);
 
@@ -20,6 +24,7 @@ export const ProjectCard = ({
       const target = event.target as HTMLElement;
       if (!target.closest(`.${styles.container}`)) {
         setIsUp(false);
+        onExpand(null); // Notifica que o projeto não está mais expandido
       }
     };
 
@@ -32,14 +37,24 @@ export const ProjectCard = ({
 
   const handleMouseClick = (e: ReactMouseEvent) => {
     e.stopPropagation();
-    setIsUp(false);
+    const expand = !isUp;
+    setIsUp(expand);
+    onExpand(expand ? data.title : null);
   };
 
+  const handleExpandClick = () => {
+    setIsUp(true);
+    onExpand(data.title); // Notifica que o projeto está expandido
+  };
+
+  if (!isVisible) {
+    return null; // Se não estiver visível, não renderiza nada
+  }
   return (
     <div
       style={{ backgroundColor: data.bgColor }}
       className={`${styles.container} ${isUp ? styles.up : ""}`}
-      onClick={() => setIsUp(true)}
+      onClick={handleExpandClick}
       onMouseEnter={MouseEnter}
       onMouseLeave={MouseLeave}
     >

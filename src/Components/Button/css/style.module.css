@@ -15,7 +15,7 @@
 
 .btnSml{
   font-size: .8rem;
-  padding: 20px 30px;
+  padding: 20px 40px;
   position: relative;
   display: flex;
   border: 2px solid var(--dodger-blue);

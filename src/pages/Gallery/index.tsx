@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./css/style.module.css";
 import { ProjectCard } from "../../Components/ProjectCard";
-import { ReturnButtonPage } from "../../Components/Button";
+import { Button, ReturnButtonPage } from "../../Components/Button";
 
 interface IGalleryProps {
   show: boolean;
@@ -17,6 +17,7 @@ export const Gallery = ({
   MouseLeave,
 }: IGalleryProps) => {
   const [isUp, setIsUp] = useState(false);
+  const [expandedProject, setExpandedProject] = useState<string | null>(null);
 
   useEffect(() => {
     if (show) {
@@ -25,6 +26,10 @@ export const Gallery = ({
       setIsUp(false);
     }
   }, [show]);
+
+  const handleProjectExpand = (projectTitle: string | null) => {
+    setExpandedProject(projectTitle);
+  };
 
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const handleMouseClick = () => {
@@ -35,90 +40,64 @@ export const Gallery = ({
   const projects: IProjectData[] = [
     {
       title: "Age Calculator App",
-      description: `This is a solution to the Age calculator app challenge on Frontend Mentor.
-       Frontend Mentor challenges help you improve your coding skills by building realistic projects.`,
+      description: `Our Age Calculator App is a sophisticated solution designed to streamline age calculation processes with precision and efficiency. Seamlessly integrated with modern technology, our app offers an intuitive user interface, ensuring a seamless experience for users of all backgrounds. Whether you're planning an event or simply curious about your age, our app provides accurate results with just a few clicks. Elevate your age calculation experience with our innovative app today`,
       bgColor: "#ffffff",
       color: "hsl(0, 0%, 8%)",
       imgURL:
         "https://raw.githubusercontent.com/ivandro-neto/Age-Calculator-App/main/screenshots/screenshot.png",
       liveLink: "https://age-calculator-app-bice.vercel.app/",
-      liveMask:
-        "Get your age just typing your birth date!",
+      liveMask: "Empowering age calculation, effortlessly!",
       logo: "/logo/logo-black.png",
       repo: "https://github.com/ivandro-neto/age-calculator-app",
       techs: ["React", "TypeScript", "CSS"],
-      scheme : 'light'
+      scheme: "light",
     },
     {
       title: "kilunga App",
-      description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-      Magnam, fugiat, minima ullam maxime earum iusto, 
-      et quibusdam illum deleniti eum suscipit? 
-      Facere quisquam voluptas, numquam saepe 
-      distinctio fuga asperiores perferendis 
-      quasi dolor reiciendis rem iusto doloremque 
-      nisi eos, maiores eligendi a non similique! 
-      Voluptatum consequatur ullam incidunt ut. 
-      Reprehenderit, tempora.`,
+      description: `Kilunga App represents the pinnacle of gardening innovation, revolutionizing the way gardening enthusiasts interact with their green spaces. With Kilunga, gardening becomes more than just a hobby – it's a journey of exploration and growth. Our platform leverages cutting-edge technology to offer personalized gardening insights, expert tips, and tailored recommendations, empowering users to cultivate vibrant and thriving gardens with confidence. Experience the future of gardening with Kilunga.`,
       bgColor: "#305350",
       color: "#FFFFFF",
-      imgURL: "https://github.com/ivandro-neto/Portfolio/blob/main/images/Projects/kilunga.png?raw=true",
+      imgURL:
+        "https://github.com/ivandro-neto/Portfolio/blob/main/images/Projects/kilunga.png?raw=true",
       liveLink: "https://kilunga.netlify.app/",
-      liveMask:
-        "Cultivar com technologia é cultive bem!",
-      logo: "/projects/bg/spacium.png",
+      liveMask: "Cultivate with technology, cultivate well!",
+      logo: "https://raw.githubusercontent.com/ivandro-neto/Kilunga/main/img/logo/logo.svg",
       repo: "https://github.com/ivandro-neto/Kilunga",
       techs: ["HTML", "CSS", "JavaScript"],
-      scheme : 'dark'
+      scheme: "dark",
     },
     {
-      title: "EventGub Api",
-      description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-      Magnam, fugiat, minima ullam maxime earum iusto, 
-      et quibusdam illum deleniti eum suscipit? 
-      Facere quisquam voluptas, numquam saepe 
-      distinctio fuga asperiores perferendis 
-      quasi dolor reiciendis rem iusto doloremque 
-      nisi eos, maiores eligendi a non similique! 
-      Voluptatum consequatur ullam incidunt ut. 
-      Reprehenderit, tempora.`,
+      title: "EventHub Api",
+      description: ` EventHub API redefines the way individuals discover and engage with events, offering a comprehensive platform that connects event organizers with eager attendees. From bustling cultural festivals to intimate community gatherings, our API provides real-time access to a diverse array of events, ensuring that users never miss out on the latest happenings in their area. With advanced features and seamless integration, EventHub API is the ultimate solution for event discovery and engagement.`,
       bgColor: " #0a100dff",
       color: "#eeeeffff",
-      imgURL: "https://github.com/ivandro-neto/Portfolio/blob/main/images/Projects/EventHubAPI.png?raw=true",
+      imgURL:
+        "https://github.com/ivandro-neto/Portfolio/blob/main/images/Projects/EventHubAPI.png?raw=true",
       liveLink: "https://github.com/ivandro-neto/EventHub",
-      liveMask:
-        "Discover the world inside the panties of a big foot in the beach Or something else that you could like before",
-      logo: "/logo/logo-white.png",
+      liveMask: "Connecting communities, one event at a time!",
+      logo: "https://raw.githubusercontent.com/ivandro-neto/EventHub/main/EventHub.API/wwwroot/public/Logo_dark.svg",
       repo: "https://github.com/ivandro-neto/EventHub",
       techs: ["HTML", "CSS", "CSharp", "MySQL", "DotNet Core", "Docker"],
-      scheme : 'dark'
+      scheme: "dark",
     },
     {
       title: "IN.Store",
-      description: `Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-      Magnam, fugiat, minima ullam maxime earum iusto, 
-      et quibusdam illum deleniti eum suscipit? 
-      Facere quisquam voluptas, numquam saepe 
-      distinctio fuga asperiores perferendis 
-      quasi dolor reiciendis rem iusto doloremque 
-      nisi eos, maiores eligendi a non similique! 
-      Voluptatum consequatur ullam incidunt ut. 
-      Reprehenderit, tempora.`,
+      description: `IN.Store is a premier e-commerce destination that caters to the modern shopper's needs, offering a curated selection of products sourced from around the globe. Our platform combines convenience with quality, providing users with a seamless shopping experience from start to finish. From fashion essentials to home decor treasures, IN.Store delivers an unparalleled shopping journey, enriched by innovative features and personalized recommendations. Explore a world of possibilities with IN.Store today.`,
       bgColor: "#ffffff",
       color: "hsl(0, 0%, 8%)",
-      imgURL: "https://github.com/ivandro-neto/Portfolio/blob/main/images/Projects/Ecommerce.png?raw=true",
+      imgURL:
+        "https://github.com/ivandro-neto/Portfolio/blob/main/images/Projects/Ecommerce.png?raw=true",
       liveLink: "https://ivandro-neto.github.io/Ecommerce/",
-      liveMask:
-        "Discover the world inside the panties of a big foot in the beach Or something else that you could like before",
+      liveMask: "Redefining online shopping, one click at a time!",
       logo: "/logo/logo-black.png",
       repo: "https://github.com/ivandro-neto/Ecommerce.git",
       techs: ["HTML", "CSS", "JavaScript"],
-      scheme : 'light'
+      scheme: "light",
     },
   ];
 
   return (
-    <div className={`${styles.container} ${isUp ? styles.up : styles.down}`}>
+    <div className={`${styles.container} ${isUp ? styles.up : styles.down} `}>
       <div className={styles.return}>
         <ReturnButtonPage
           scheme={"light"}
@@ -128,7 +107,7 @@ export const Gallery = ({
           MouseClick={handleMouseClick}
         />
       </div>
-        <h1>Featured Projects</h1>
+      <h1>Featured Projects</h1>
       <div className={styles.list}>
         {projects.map((project) => (
           <ProjectCard
@@ -136,8 +115,20 @@ export const Gallery = ({
             data={project}
             MouseEnter={MouseEnter}
             MouseLeave={MouseLeave}
+            onExpand={handleProjectExpand}
+            isVisible={!expandedProject || expandedProject === project.title}
           />
         ))}
+      </div>
+      <div className={styles.btnFooter}>
+        <Button
+          scheme="light"
+          link="https://github.com/ivandro-neto?tab=repositories"
+          size="small"
+          value={"See More"}
+          MouseEnter={MouseEnter}
+          MouseLeave={MouseLeave}
+        />
       </div>
     </div>
   );

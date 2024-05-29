@@ -2,7 +2,8 @@ import { MouseEventHandler, MouseEvent as ReactMouseEvent} from 'react';
 import styles from './css/style.module.css';
 
 interface IButtonProps {
-  size: string;
+  scheme?: string;
+  size?: string;
   value: string;
   link: string;
   MouseEnter: () => void; // Função para onMouseEnter
@@ -16,10 +17,10 @@ interface IButtonPageProps {
   MouseLeave: () => void; // Função para onMouseLeave
 }
 
-export const Button = ({ size, value, link, MouseEnter, MouseLeave }: IButtonProps) => {
+export const Button = ({ size, scheme, value, link, MouseEnter, MouseLeave }: IButtonProps) => {
   return (
     <div
-      className={size == 'small'? styles.btnSml : styles.button}
+      className={` ${scheme == 'dark'? styles.dark: styles.light} ${size == 'small'? styles.btnSml : styles.button}`}
       onMouseEnter={MouseEnter} // Não é necessário chamar a função aqui, apenas passar a referência
       onMouseLeave={MouseLeave} // Não é necessário chamar a função aqui, apenas passar a referência
     >

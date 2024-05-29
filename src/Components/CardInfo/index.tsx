@@ -91,6 +91,7 @@ export const CardInfo = ({ fixed, dataType, MouseEnter, MouseLeave } : ICardInfo
         <div>
 
         <Button 
+        scheme="dark"
         size={'small'}
         value={'Say Hello'} 
         link="mailto:ivandro.neto@outlook.com?subject=Let's%20work"

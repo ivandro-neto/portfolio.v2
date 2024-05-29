@@ -176,3 +176,61 @@
   font-size: 0.8rem;
   font-weight: 600;
 }
+
+@media screen and (max-width: 768px) {
+  .bgImg {
+    display: none;
+  }
+
+  .up {
+    height: 100vh;
+  }
+  .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0;
+    z-index: 2;
+    gap: 20px;
+    transition: 500ms;
+    transition-delay: 500ms;
+  }
+  
+
+  .info {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .description,
+  .header {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    width: 90%;
+    height: 100%;
+    gap: 20px;
+    line-height: 1.5;
+    font-size: .8rem;
+  }
+  .live a {
+    font-size: 1.6rem;
+    color: var(--white);
+    font-weight: 800;
+    text-wrap: wrap;
+    text-align: left;
+  }
+  .title{
+    font-size: 1.4rem;
+  }
+
+}
