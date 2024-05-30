@@ -1,4 +1,4 @@
-import { MouseEvent as ReactMouseEvent, useState } from 'react';
+import { MouseEvent as ReactMouseEvent, useEffect, useState } from 'react';
 import styles from './css/style.module.css';
 import Logo from '/logo/logo-white.png';
 import Cursor from '../../Components/Cursor';
@@ -6,6 +6,7 @@ import { CardInfo } from '../../Components/CardInfo';
 import { ButtonPage } from '../../Components/Button';
 import { Footer } from '../../Components/Footer';
 import { Gallery } from '../Gallery';
+import { Tutorial } from '../../Components/Tutorial';
 
 const Home = () => {
   const [hoverState, setHoverState] = useState({ isHovered: false, hoverType: '' });
@@ -27,12 +28,20 @@ const Home = () => {
   const handleLogoClick = (e: ReactMouseEvent) => {
     e.stopPropagation();
     setFixed(!fixed);
+    if(localStorage.getItem('isNew') == null){
+      localStorage.setItem('isNew', 'false')
+    }
   };
-
+  useEffect(()=>{
+    document.documentElement.setAttribute('translate', 'no')
+  },[])
+  
   return (
     <section className={styles.container}>
       <Cursor isHovered={hoverState.isHovered} hoverType={hoverState.hoverType} />
       <main className={styles.hero} onClick={()=> setFixed(false)}>
+
+        <Tutorial message='click me' visible={Boolean(localStorage.getItem('isNew'))}/>
         <div
           className={`${styles.logo} ${fixed ? styles.pulsing : ''}`}
           onMouseEnter={() => handleHoverIn('cta')}

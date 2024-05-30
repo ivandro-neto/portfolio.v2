@@ -1,7 +1,7 @@
 .brief {
   display: flex;
   flex-direction: column;
-  width: 25em;
+  width: 32em;
   height: auto;
   color: var(--white);
   background-color: var(--raisin-black);

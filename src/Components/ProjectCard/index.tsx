@@ -99,7 +99,7 @@ export const ProjectCard = ({
               <ul className={styles.techsList}>
                 {data.techs.map((tech) => (
                   <li key={tech} className={styles.tech}>
-                    {tech}
+                    #{tech}
                   </li>
                 ))}
                 <li>
