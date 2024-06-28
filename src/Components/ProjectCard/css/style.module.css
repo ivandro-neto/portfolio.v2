@@ -79,7 +79,7 @@
   align-items: center;
   flex-direction: column;
   padding: 20px 30px;
-  z-index: 2;
+  z-index: 1000;
   gap: 20px;
   transition: 500ms;
   transition-delay: 500ms;
@@ -119,7 +119,6 @@
 }
 
 .up {
-  position: absolute;
   top: 0;
   left: 0;
   align-self: center;
@@ -128,8 +127,7 @@
   height: 100vh;
   border-radius: 0;
   transition: 500ms;
-  z-index: 5;
-}
+} 
 
 .live {
   display: flex;
@@ -231,6 +229,73 @@
   }
   .title{
     font-size: 1.4rem;
+  }
+
+}
+
+/*BUTTON STyling*/
+.btnSml{
+  font-size: .8rem;
+  padding: 20px 40px;
+  position: relative;
+  display: flex;
+  border: 2px solid var(--dodger-blue);
+  background-color: transparent;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btnSml::before, .button::before {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  background-color: var(--dodger-blue);
+  top: 0;
+  left: 0;
+  transition: width 500ms; /* Alterei a propriedade de transição */
+}
+
+.button:hover::before, .btnSml:hover::before {
+  width: 100%;
+}
+
+.button:hover a, .btnSml:hover a {
+  color: var(--white);
+}
+
+.button a, .btnSml a {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  color: var(--white);
+  z-index: 1;
+  transition: color 250ms;
+  width: 100%;
+  height: 100%;
+  text-transform: uppercase;
+  font-weight: 550;
+}
+
+
+.light a{
+  color: var(--raisin-black);
+}
+.dark a{
+  color: var(--white);
+}
+/* Media queries para tornar o botão mais responsivo */
+@media (max-width: 768px) {
+  .button {
+    font-size: 1rem;
+    width: 50vw;
+    height: 8vh;
   }
 
 }
