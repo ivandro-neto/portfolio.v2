@@ -52,16 +52,14 @@
 }
 
 .link{
-  width: 2em;
-  height: 2em;
   background-color: transparent;
   border: 2px dotted var(--white);
   animation: spin 1s infinite linear;
-}
-
+  transform: translate(-25%, -25%);
+  }
+  
 .button{
-  width: 2em;
-  height: 2em;
+  transform: translate(-25%, -25%);
   background-color: transparent;
   border: 2px dashed var(--white);
   animation: spin 1s infinite linear;
