@@ -6,7 +6,7 @@ interface IProjectData {
   color: string;
   imgURL: string;
   logo: string;
-  repo: string;
+  repo: string | null;
   liveLink: string;
   liveMask: string;
   techs: string[];

@@ -1,16 +1,16 @@
 export const projects: IProjectData[] = [
   {
-    title: "Age Calculator App",
-    description: `Our Age Calculator App is a sophisticated solution designed to streamline age calculation processes with precision and efficiency. Seamlessly integrated with modern technology, our app offers an intuitive user interface, ensuring a seamless experience for users of all backgrounds. Whether you're planning an event or simply curious about your age, our app provides accurate results with just a few clicks. Elevate your age calculation experience with our innovative app today`,
+    title: "Custom & Log Solutions",
+    description: `We are an Angolan transport and logistics company specialized in the efficient and coordinated management of import and export operations of goods. Our commitment lies in providing excellent transport and logistics solutions, uniting origin and destination customs offices with efficiency and transparency, offering competitive prices and quality service.`,
     bgColor: "#ffffff",
     color: "hsl(0, 0%, 8%)",
     imgURL:
-      "https://raw.githubusercontent.com/ivandro-neto/Age-Calculator-App/main/screenshots/screenshot.png",
-    liveLink: "https://age-calculator-app-bice.vercel.app/",
-    liveMask: "Empowering age calculation, effortlessly!",
-    logo: "/logo/logo-black.png",
-    repo: "https://github.com/ivandro-neto/age-calculator-app",
-    techs: ["React", "TypeScript", "CSS"],
+      "https://raw.githubusercontent.com/ivandro-neto/CustomsandLogSolutions/main/public/Screenshot.png?token=GHSAT0AAAAAACVEB2CE63LOFSQKEVE7MUOSZVWP77Q",
+    liveLink: "https://clsolutions.ao",
+    liveMask: "Customs and logistics solutions",
+    logo: "https://raw.githubusercontent.com/ivandro-neto/CustomsandLogSolutions/26366a96b04a37b7b298ebaa8a87d8a4c4bff52b/public/images/brand/logo.svg?token=APN5ANUETCY4H5NG7LKJBP3GWZ7TS",
+    repo: null,
+    techs: ["React", "JavaScript", "CSS Module"],
     scheme: "light",
   },
   {
@@ -47,10 +47,10 @@ export const projects: IProjectData[] = [
     bgColor: "#305350",
     color: "#ffffff",
     imgURL:
-      "https://raw.githubusercontent.com/ivandro-neto/SPACIUM/main/Screenshots/Spacium.png?token=GHSAT0AAAAAACVEB2CF7YNQZ4Y274AYNDO6ZVKXF3A",
+      "https://raw.githubusercontent.com/ivandro-neto/SPACIUM/main/Screenshots/Spacium.png?token=GHSAT0AAAAAACVEB2CEUXOCZP6WJOULBBTKZVWQCNA",
     liveLink: "https://spacium.netlify.app/",
     liveMask: "Shared Space and Pop up ideas",
-    logo: "https://raw.githubusercontent.com/ivandro-neto/SPACIUM/a44094822772b11b17cde8b1862f78bca32db807/public/Logo-Icon.svg?token=APN5ANTHG5RYA6WIWACACCDGVK434",
+    logo: "https://raw.githubusercontent.com/ivandro-neto/SPACIUM/a44094822772b11b17cde8b1862f78bca32db807/public/Logo-Icon.svg?token=APN5ANRTQY4EVI6EZWTC653GW2AN6",
     repo: "https://github.com/ivandro-neto/SPACIUM",
     techs: ["React", "CSS", "JavaScript"],
     scheme: "dark",

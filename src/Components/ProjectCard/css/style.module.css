@@ -300,3 +300,10 @@
   }
 
 }
+
+.hideRepo{
+  display: none;
+}
+.showRepo{
+  display: block;
+}

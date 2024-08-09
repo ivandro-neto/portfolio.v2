@@ -101,7 +101,7 @@ export const ProjectCard = ({
           )).join('')}
           <li>
             <a
-              class="interaction"
+              class="interaction ${data.repo == null ? styles.hideRepo : styles.showRepo}"
               href="${data.repo}"
               aria-label="Github"
               style="fill: ${data.color}"
