@@ -47,7 +47,7 @@ export const projects: IProjectData[] = [
     bgColor: "#305350",
     color: "#ffffff",
     imgURL:
-      "projects/bg/Spacium.png",
+      "projects/bg/spacium.png",
     liveLink: "https://spacium.netlify.app/",
     liveMask: "Shared Space and Pop up ideas",
     logo: "projects/logo/spc-logo.svg",
