@@ -28,17 +28,17 @@ export const projects: IProjectData[] = [
     scheme: "dark",
   },
   {
-    title: "EventHub Api",
+    title: "In.orbit",
     description: ` EventHub API redefines the way individuals discover and engage with events, offering a comprehensive platform that connects event organizers with eager attendees. From bustling cultural festivals to intimate community gatherings, our API provides real-time access to a diverse array of events, ensuring that users never miss out on the latest happenings in their area. With advanced features and seamless integration, EventHub API is the ultimate solution for event discovery and engagement.`,
     bgColor: " #0a100dff",
     color: "#eeeeffff",
     imgURL:
       "https://github.com/ivandro-neto/Portfolio/blob/main/images/Projects/EventHubAPI.png?raw=true",
-    liveLink: "https://github.com/ivandro-neto/EventHub",
-    liveMask: "Connecting communities, one event at a time!",
+    liveLink: "https://inorbit-eta.vercel.app/",
+    liveMask: "Track your Weekly goals, be productive!",
     logo: "https://raw.githubusercontent.com/ivandro-neto/EventHub/main/EventHub.API/wwwroot/public/Logo_dark.svg",
     repo: "https://github.com/ivandro-neto/EventHub",
-    techs: ["HTML", "CSS", "CSharp", "MySQL", "DotNet Core", "Docker"],
+    techs: ["React.Js", "TailwindCSS", "TypeScript", "PostgresSQL", "Drizzle ORM", "Docker", "Fastify"],
     scheme: "dark",
   },
   {
