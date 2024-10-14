@@ -35,7 +35,7 @@ The main utility of Inorbit lies in its ability to facilitate organization and f
     bgColor: " #0a100dff",
     color: "#eeeeffff",
     imgURL:
-      "https://github.com/ivandro-neto/Portfolio/blob/main/images/Projects/EventHubAPI.png?raw=true",
+      "https://drive.google.com/file/d/1w2JTdcIAp6xdCrC7m78BcqQAgfF15dV6/view?usp=sharing",
     liveLink: "https://inorbit-eta.vercel.app/",
     liveMask: "Track your Weekly goals, be productive!",
     logo: "https://github.com/ivandro-neto/Inorbit-frontend/blob/main/public/icon.svg",
