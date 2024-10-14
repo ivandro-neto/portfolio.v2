@@ -32,7 +32,7 @@ export const projects: IProjectData[] = [
     description: `The <strong>Inorbit</strong> project is an application developed during the NLW (Next Level Week) by Rocketseat, focused on helping users set and track their weekly goals. With an intuitive and modern interface, the application allows users to register objectives, view their progress, and efficiently manage their daily tasks.
 
 The main utility of Inorbit lies in its ability to facilitate organization and focus on personal and professional goals. By providing a visual means to track goal completion, the application motivates users to stay on track and prioritize their activities, promoting a more productive routine. Additionally, the user-friendly design and practical functionality make the experience enjoyable, encouraging positive habits in planning and execution.`,
-    bgColor: " #0a100dff",
+    bgColor: " #18181B",
     color: "#eeeeffff",
     imgURL:
       "https://raw.githubusercontent.com/ivandro-neto/Inorbit-frontend/refs/heads/main/public/Goals.png",
