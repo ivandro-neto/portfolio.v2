@@ -38,7 +38,7 @@ The main utility of Inorbit lies in its ability to facilitate organization and f
       "https://raw.githubusercontent.com/ivandro-neto/Inorbit-frontend/refs/heads/main/public/Goals.png",
     liveLink: "https://inorbit-eta.vercel.app/",
     liveMask: "Track your Weekly goals, be productive!",
-    logo: "https://github.com/ivandro-neto/Inorbit-frontend/blob/main/public/icon.svg",
+    logo: "https://raw.githubusercontent.com/ivandro-neto/Inorbit-frontend/refs/heads/main/public/icon.svg",
     repo: "https://github.com/ivandro-neto/Inorbit-frontend",
     techs: ["React.Js", "TailwindCSS", "TypeScript", "PostgresSQL", "Drizzle ORM", "Docker", "Fastify"],
     scheme: "dark",
