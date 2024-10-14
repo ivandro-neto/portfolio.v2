@@ -29,7 +29,9 @@ export const projects: IProjectData[] = [
   },
   {
     title: "In.orbit",
-    description: `This is a Rocktseat NLW project offering a comprehensive platform that connects event organizers with eager attendees. From bustling cultural festivals to intimate community gatherings, our API provides real-time access to a diverse array of events, ensuring that users never miss out on the latest happenings in their area. With advanced features and seamless integration, EventHub API is the ultimate solution for event discovery and engagement.`,
+    description: `The <strong>Inorbit</strong> project is an application developed during the NLW (Next Level Week) by Rocketseat, focused on helping users set and track their weekly goals. With an intuitive and modern interface, the application allows users to register objectives, view their progress, and efficiently manage their daily tasks.
+
+The main utility of Inorbit lies in its ability to facilitate organization and focus on personal and professional goals. By providing a visual means to track goal completion, the application motivates users to stay on track and prioritize their activities, promoting a more productive routine. Additionally, the user-friendly design and practical functionality make the experience enjoyable, encouraging positive habits in planning and execution.`,
     bgColor: " #0a100dff",
     color: "#eeeeffff",
     imgURL:
